@@ -1,0 +1,28 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.s4.conventional-commits</id>
+    <name>Conventional Commits Helper</name>
+    <vendor email="ilya2306@inbox.ru">Ilya Sokolov</vendor>
+    <version>0.0.1</version>
+
+    <description><![CDATA[<p>Description notes will be filled by gradle build</p>]]></description>
+
+    <change-notes><![CDATA[<p>Change notes will be filled by gradle build</p>]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="createCommitMessageAction"
+                class="com.s4.conventionalcommits.CommitMessageAction"
+                text="Conventional-Commit-Message"
+                description="Create conventional commit message"
+                icon="PluginIcons.EDIT">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
