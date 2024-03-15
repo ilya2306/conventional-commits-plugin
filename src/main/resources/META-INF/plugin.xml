@@ -2,19 +2,24 @@
 <idea-plugin>
     <id>com.s4.conventional-commits</id>
     <name>Conventional Commits Helper</name>
-    <vendor email="ilya2306@inbox.ru">Ilya Sokolov</vendor>
+    <vendor email="ilya2306@inbox.ru" url="https://github.com/ilya2306">Ilya Sokolov</vendor>
     <version>0.0.1</version>
 
     <description><![CDATA[<p>Description notes will be filled by gradle build</p>]]></description>
 
     <change-notes><![CDATA[<p>Change notes will be filled by gradle build</p>]]></change-notes>
 
+    <idea-version since-build="203.*"/>
+
+    <depends>com.intellij.java</depends>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.vcs</depends>
 
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+
+    <resource-bundle>messages</resource-bundle>
 
     <actions>
         <action id="createCommitMessageAction"
